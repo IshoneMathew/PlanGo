@@ -348,4 +348,4 @@ class _PriceRow extends StatelessWidget {
       ),
     );
   }
-}
+}//done the screen dart part
