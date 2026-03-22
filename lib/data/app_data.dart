@@ -1,0 +1,366 @@
+import '../models/models.dart';
+
+class AppData {
+  static final List<Destination> destinations = [
+    Destination(
+      id: '1',
+      name: 'Sigiriya Rock Fortress',
+      location: 'Sigiriya, Matale District',
+      province: 'Central Province',
+      rating: 4.9,
+      reviews: 4821,
+      pricePerPerson: 59,
+      imageUrl: 'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=800&q=80',
+      description:
+          'Sigiriya is an ancient rock fortress rising 200m above the surrounding jungle in Sri Lanka\'s Cultural Triangle. A UNESCO World Heritage Site, it features frescoes of heavenly maidens, mirror-polished walls, and spectacular landscaped gardens at its base. Climbing its 1,200 steps rewards you with breathtaking 360° views across the Central Province.',
+      galleryImages: [
+        'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=400&q=80',
+        'https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=400&q=80',
+        'https://images.unsplash.com/photo-1566296314736-6eaac1ca0cb9?w=400&q=80',
+        'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80',
+      ],
+      travelers: 50,
+      isFavorite: false,
+      isBookmarked: true,
+    ),
+    Destination(
+      id: '2',
+      name: 'Mirissa Beach',
+      location: 'Mirissa, Matara District',
+      province: 'Southern Province',
+      rating: 4.7,
+      reviews: 3102,
+      pricePerPerson: 35,
+      imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
+      description:
+          'Mirissa is Sri Lanka\'s premier beach destination, famous for its crescent-shaped bay fringed by swaying palms. Between November and April it becomes the world\'s best spot for blue whale watching. The beach\'s laid-back vibe, fresh seafood shacks, and warm turquoise waters make it unmissable on any Sri Lanka itinerary.',
+      galleryImages: [
+        'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80',
+        'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=400&q=80',
+        'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=400&q=80',
+        'https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=400&q=80',
+      ],
+      travelers: 35,
+      isFavorite: true,
+      isBookmarked: false,
+    ),
+    Destination(
+      id: '3',
+      name: 'Temple of the Tooth',
+      location: 'Kandy, Kandy District',
+      province: 'Central Province',
+      rating: 4.8,
+      reviews: 5240,
+      pricePerPerson: 25,
+      imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      description:
+          'Sri Lanka\'s most sacred Buddhist site, the Temple of the Tooth Relic (Sri Dalada Maligawa) houses a tooth of the Buddha and sits on the shores of the Kandy Lake. Surrounded by colonial-era buildings and lush hills, Kandy is Sri Lanka\'s cultural capital and a UNESCO World Heritage Site.',
+      galleryImages: [
+        'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80',
+        'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=400&q=80',
+        'https://images.unsplash.com/photo-1540202404-a2f29016b523?w=400&q=80',
+        'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80',
+      ],
+      travelers: 45,
+      isFavorite: true,
+      isBookmarked: true,
+    ),
+    Destination(
+      id: '4',
+      name: 'Galle Fort',
+      location: 'Galle, Galle District',
+      province: 'Southern Province',
+      rating: 4.8,
+      reviews: 3987,
+      pricePerPerson: 20,
+      imageUrl: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&q=80',
+      description:
+          'Built by the Portuguese in 1588 and extensively fortified by the Dutch in the 17th century, Galle Fort is the largest remaining European fortress in Asia. Its cobblestone streets are lined with boutique hotels, cafés, jewellery shops, and art galleries – all framed by ramparts overlooking the Indian Ocean.',
+      galleryImages: [
+        'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&q=80',
+        'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80',
+        'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80',
+        'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=400&q=80',
+      ],
+      travelers: 40,
+      isFavorite: true,
+    ),
+    Destination(
+      id: '5',
+      name: 'Ella Rock & Nine Arches',
+      location: 'Ella, Badulla District',
+      province: 'Uva Province',
+      rating: 4.8,
+      reviews: 2876,
+      pricePerPerson: 30,
+      imageUrl: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&q=80',
+      description:
+          'Perched at 1,041m in the Hill Country, Ella is famous for its Nine Arch Bridge — a stunning colonial viaduct surrounded by tea plantations — and the challenging hike up Ella Rock. The cool mountain air, misty valleys, and slow-paced town life make it one of Sri Lanka\'s most beloved destinations.',
+      galleryImages: [
+        'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=400&q=80',
+        'https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=400&q=80',
+        'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80',
+        'https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=400&q=80',
+      ],
+      travelers: 28,
+      isFavorite: true,
+    ),
+    Destination(
+      id: '6',
+      name: 'Yala National Park',
+      location: 'Yala, Hambantota District',
+      province: 'Southern Province',
+      rating: 4.7,
+      reviews: 2341,
+      pricePerPerson: 75,
+      imageUrl: 'https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?w=800&q=80',
+      description:
+          'Yala is Sri Lanka\'s most visited and second-largest national park, home to the world\'s highest density of leopards. Its lagoons, scrub jungles, and open grasslands also shelter elephants, sloth bears, crocodiles, and over 215 bird species. Dawn and dusk safaris offer the best wildlife encounters.',
+      galleryImages: [
+        'https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?w=400&q=80',
+        'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=400&q=80',
+        'https://images.unsplash.com/photo-1548625361-58a9d386a2a9?w=400&q=80',
+        'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&q=80',
+      ],
+      travelers: 22,
+      isFavorite: false,
+    ),
+    Destination(
+      id: '7',
+      name: 'Arugam Bay',
+      location: 'Arugam Bay, Ampara District',
+      province: 'Eastern Province',
+      rating: 4.6,
+      reviews: 1893,
+      pricePerPerson: 40,
+      imageUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80',
+      description:
+          'Arugam Bay is one of the world\'s top ten surf spots, drawing wave-riders from around the globe between May and October. Beyond the surf, this charming lagoon-side village offers elephant safaris at nearby Kumana National Park, sea turtle nesting sites, and a deeply relaxed coastal atmosphere.',
+      galleryImages: [
+        'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80',
+        'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400&q=80',
+        'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&q=80',
+        'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=400&q=80',
+      ],
+      travelers: 18,
+      isFavorite: true,
+    ),
+    Destination(
+      id: '8',
+      name: 'Dambulla Cave Temple',
+      location: 'Dambulla, Matale District',
+      province: 'Central Province',
+      rating: 4.7,
+      reviews: 3124,
+      pricePerPerson: 22,
+      imageUrl: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+      description:
+          'The Dambulla Royal Cave Temple and Golden Temple is Sri Lanka\'s largest and best-preserved cave temple complex. Dating back to the 1st century BC, its five caves contain 157 statues and 80 cave paintings spread across 2,100 sq m — a breathtaking panorama of Buddhist art and devotion set high above the surrounding plains.',
+      galleryImages: [
+        'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80',
+        'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&q=80',
+        'https://images.unsplash.com/photo-1455156218388-5e61b526818b?w=400&q=80',
+        'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80',
+      ],
+      travelers: 15,
+      isFavorite: false,
+    ),
+  ];
+
+  static List<Destination> get favoriteDestinations =>
+      destinations.where((d) => d.isFavorite).toList();
+
+  static final List<TripSchedule> schedules = [
+    TripSchedule(
+      id: '1',
+      destinationName: 'Sigiriya Rock Fortress',
+      location: 'Sigiriya, Matale District',
+      imageUrl: 'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=400&q=80',
+      date: DateTime(2025, 1, 26),
+      time: '7:00 AM',
+    ),
+    TripSchedule(
+      id: '2',
+      destinationName: 'Nine Arch Bridge',
+      location: 'Ella, Badulla District',
+      imageUrl: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=400&q=80',
+      date: DateTime(2025, 1, 28),
+      time: '9:00 AM',
+    ),
+    TripSchedule(
+      id: '3',
+      destinationName: 'Yala Safari',
+      location: 'Yala, Hambantota District',
+      imageUrl: 'https://images.unsplash.com/photo-1578645510447-e20b4311e3ce?w=400&q=80',
+      date: DateTime(2025, 1, 30),
+      time: '5:30 AM',
+    ),
+    TripSchedule(
+      id: '4',
+      destinationName: 'Galle Fort Walk',
+      location: 'Galle, Galle District',
+      imageUrl: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=400&q=80',
+      date: DateTime(2025, 2, 1),
+      time: '4:00 PM',
+    ),
+  ];
+
+  static final List<Contact> contacts = [
+    Contact(
+      id: '1',
+      name: 'Sajib Rahman',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&q=80',
+      lastMessage: "I'm very glad you like it 🔥",
+      time: '9:35',
+      isOnline: true,
+    ),
+    Contact(
+      id: '2',
+      name: 'Maria Santos',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
+      lastMessage: 'We are arriving today at 01:45',
+      time: '9:37',
+      isOnline: true,
+    ),
+    Contact(
+      id: '3',
+      name: 'James Wilson',
+      avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&q=80',
+      lastMessage: 'Thank you for the recommendation!',
+      time: 'Yesterday',
+      isOnline: false,
+    ),
+    Contact(
+      id: '4',
+      name: 'Priya Sharma',
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80',
+      lastMessage: 'Is the resort available in March?',
+      time: 'Yesterday',
+      isOnline: false,
+    ),
+    Contact(
+      id: '5',
+      name: 'Chen Wei',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
+      lastMessage: "Let's plan the trip together",
+      time: 'Mon',
+      isOnline: true,
+    ),
+  ];
+
+  static final List<ChatMessage> chatMessages = [
+    ChatMessage(id: '1', text: 'Hello!', time: '9:24', isMe: true),
+    ChatMessage(
+      id: '2',
+      text: 'Thank you very much for the Sigiriya tour arrangement, we really loved it. We will stay in Sri Lanka for another 5 days...',
+      time: '9:30',
+      isMe: true,
+    ),
+    ChatMessage(
+      id: '3',
+      text: 'Hello!',
+      time: '9:34',
+      isMe: false,
+      senderAvatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&q=80',
+    ),
+    ChatMessage(
+      id: '4',
+      text: "I'm very glad you enjoyed it 🔥",
+      time: '9:35',
+      isMe: false,
+      senderAvatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&q=80',
+    ),
+    ChatMessage(
+      id: '5',
+      text: 'We are arriving in Galle today at 01:45, will someone be at the guesthouse?',
+      time: '9:37',
+      isMe: false,
+      senderAvatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&q=80',
+    ),
+    ChatMessage(id: '6', text: 'I will be at home', time: '9:39', isMe: true),
+  ];
+
+  static final List<NotificationItem> notifications = [
+    NotificationItem(
+      id: '1',
+      title: 'Super Offer',
+      subtitle: 'Get 60% off your first Sri Lanka booking',
+      time: 'Sun, 12:40pm',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&q=80',
+      isRead: true,
+    ),
+    NotificationItem(
+      id: '2',
+      title: 'Super Offer',
+      subtitle: 'Get 60% off your first Sri Lanka booking',
+      time: 'Mon, 11:50pm',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
+    ),
+    NotificationItem(
+      id: '3',
+      title: 'New Destination Added',
+      subtitle: 'Explore Polonnaruwa Ancient City now live',
+      time: 'Tue, 10:56pm',
+      avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&q=80',
+    ),
+    NotificationItem(
+      id: '4',
+      title: 'Trip Reminder',
+      subtitle: 'Your Sigiriya trip is in 3 days',
+      time: 'Wed, 12:40pm',
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80',
+    ),
+    NotificationItem(
+      id: '5',
+      title: 'Super Offer',
+      subtitle: 'Get 60% off your first Sri Lanka booking',
+      time: 'Fri, 11:50pm',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
+    ),
+    NotificationItem(
+      id: '6',
+      title: 'Whale Season Open!',
+      subtitle: 'Book Mirissa whale watching now',
+      time: 'Sat, 10:56pm',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&q=80',
+    ),
+  ];
+
+  // Sri Lanka provinces for filtering
+  static const List<String> provinces = [
+    'All Provinces',
+    'Central Province',
+    'Southern Province',
+    'Western Province',
+    'Northern Province',
+    'Eastern Province',
+    'North Western Province',
+    'North Central Province',
+    'Uva Province',
+    'Sabaragamuwa Province',
+  ];
+
+  // Sri Lanka cities for planner
+  static const List<String> sriLankaCities = [
+    'Colombo',
+    'Kandy',
+    'Galle',
+    'Sigiriya',
+    'Ella',
+    'Mirissa',
+    'Arugam Bay',
+    'Dambulla',
+    'Nuwara Eliya',
+    'Trincomalee',
+    'Jaffna',
+    'Anuradhapura',
+    'Polonnaruwa',
+    'Yala',
+    'Unawatuna',
+    'Hikkaduwa',
+    'Negombo',
+    'Bentota',
+    'Pinnawala',
+    'Horton Plains',
+  ];
+}
