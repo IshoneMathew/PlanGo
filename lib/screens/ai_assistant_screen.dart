@@ -16,7 +16,8 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
 
   final List<_ChatMsg> _messages = [
     _ChatMsg(
-      text: "Hi! I'm PlanGo AI 🇱🇰 Your Sri Lanka travel expert! I can help you plan the perfect itinerary, discover hidden gems, find guesthouses, and answer any question about travelling Sri Lanka. Where shall we start?",
+      text:
+          "Hi! I'm PlanGo AI 🇱🇰 Your Sri Lanka travel expert! I can help you plan the perfect itinerary, discover hidden gems, find guesthouses, and answer any question about travelling Sri Lanka. Where shall we start?",
       isAi: true,
     ),
   ];
@@ -52,15 +53,23 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
 
   String _getAiResponse(String input) {
     final lower = input.toLowerCase();
-    if (lower.contains('sri lanka') || lower.contains('sigiriya') || lower.contains('colombo')) {
+    if (lower.contains('sri lanka') ||
+        lower.contains('sigiriya') ||
+        lower.contains('colombo')) {
       return "Sri Lanka is incredible! 🇱🇰 I recommend:\n\n• **Sigiriya** – Ancient rock fortress, a must-see\n• **Galle** – Colonial fort city by the sea\n• **Ella** – Scenic hill country & tea plantations\n• **Mirissa** – Beautiful whale watching beach\n\nThe best time to visit the west & south coast is November–April. Would you like a detailed itinerary?";
-    } else if (lower.contains('hotel') || lower.contains('stay') || lower.contains('accommodation')) {
+    } else if (lower.contains('hotel') ||
+        lower.contains('stay') ||
+        lower.contains('accommodation')) {
       return "Sri Lanka has accommodation for every budget! 🏨\n\n• **Budget**: Guesthouses from \$12/night\n• **Mid-range**: Boutique eco-lodges \$40–100/night\n• **Luxury**: Aman Resorts & Geoffrey Bawa hotels from \$250/night\n\nI can suggest options by region. Which part of Sri Lanka are you heading to?";
     } else if (lower.contains('beach')) {
       return "Sri Lanka has over 1,600km of coastline! 🏖️\n\n• **Mirissa** – Blue whale watching (Nov–Apr)\n• **Unawatuna** – Calm snorkelling waters\n• **Arugam Bay** – World top-10 surf spot\n• **Nilaveli** – Pristine white sand, Pigeon Island\n• **Bentota** – Water sports & luxury resorts\n\nThe south coast is best Nov–Apr; east coast May–Sep.";
-    } else if (lower.contains('itinerary') || lower.contains('plan') || lower.contains('trip')) {
+    } else if (lower.contains('itinerary') ||
+        lower.contains('plan') ||
+        lower.contains('trip')) {
       return "I'd love to help plan your trip! 🗺️ Let me know:\n\n1. How many days do you have?\n2. What's your budget range?\n3. What interests you most – nature, culture, beaches, adventure?\n\nI'll create a perfect day-by-day itinerary for you!";
-    } else if (lower.contains('food') || lower.contains('eat') || lower.contains('restaurant')) {
+    } else if (lower.contains('food') ||
+        lower.contains('eat') ||
+        lower.contains('restaurant')) {
       return "Sri Lankan cuisine is sensational! 🍛\n\n• **Rice & Curry** – The national dish; try at a local amma's kitchen\n• **Kottu Roti** – Chopped roti stir-fry, best street food\n• **Hoppers (Appam)** – Crispy bowl-shaped crepes with egg\n• **String Hoppers** – Steamed rice noodle nests\n• **Pol Sambol** – Spicy coconut relish\n\nAverage meal: \$2–5 at a local spot. Want tips for a specific city?";
     } else {
       return "Great question! As your Sri Lanka travel expert, I can help with:\n\n• 🗺️ Destination recommendations within Sri Lanka\n• 📅 Day-by-day itinerary planning\n• 🏨 Guesthouse & hotel suggestions\n• 🍛 Local food & cultural tips\n• 💰 Budget planning in LKR & USD\n• 🚂 Train, bus & tuk-tuk transport tips\n\nWhat would you like to know more about?";
@@ -97,7 +106,8 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
             Expanded(
               child: ListView.builder(
                 controller: _scrollController,
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 itemCount: _messages.length + (_isTyping ? 1 : 0),
                 itemBuilder: (_, i) {
                   if (_isTyping && i == _messages.length) {
@@ -120,23 +130,33 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 14),
       decoration: const BoxDecoration(
         color: Colors.white,
-        boxShadow: [BoxShadow(color: Color(0x0A000000), blurRadius: 8, offset: Offset(0, 2))],
+        boxShadow: [
+          BoxShadow(
+              color: Color(0x0A000000), blurRadius: 8, offset: Offset(0, 2))
+        ],
       ),
       child: Row(
         children: [
           GestureDetector(
             onTap: () => Navigator.pop(context),
             child: Container(
-              width: 40, height: 40,
-              decoration: BoxDecoration(color: AppColors.lightGrey, borderRadius: BorderRadius.circular(12)),
-              child: const Icon(Icons.chevron_left, color: AppColors.textPrimary),
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                  color: AppColors.lightGrey,
+                  borderRadius: BorderRadius.circular(12)),
+              child:
+                  const Icon(Icons.chevron_left, color: AppColors.textPrimary),
             ),
           ),
           const SizedBox(width: 12),
           Container(
-            width: 40, height: 40,
-            decoration: const BoxDecoration(gradient: AppColors.primaryGradient, shape: BoxShape.circle),
-            child: const Icon(Icons.auto_awesome, color: Colors.white, size: 20),
+            width: 40,
+            height: 40,
+            decoration: const BoxDecoration(
+                gradient: AppColors.primaryGradient, shape: BoxShape.circle),
+            child:
+                const Icon(Icons.auto_awesome, color: Colors.white, size: 20),
           ),
           const SizedBox(width: 12),
           Expanded(
@@ -144,21 +164,36 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text('PlanGo AI',
-                    style: GoogleFonts.spaceGrotesk(fontSize: 16, fontWeight: FontWeight.w700, color: AppColors.textPrimary)),
+                    style: GoogleFonts.spaceGrotesk(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.textPrimary)),
                 Row(
                   children: [
-                    Container(width: 7, height: 7, decoration: const BoxDecoration(color: AppColors.green, shape: BoxShape.circle)),
+                    Container(
+                        width: 7,
+                        height: 7,
+                        decoration: const BoxDecoration(
+                            color: AppColors.green, shape: BoxShape.circle)),
                     const SizedBox(width: 5),
-                    Text('Online', style: GoogleFonts.spaceGrotesk(fontSize: 11, color: AppColors.green, fontWeight: FontWeight.w500)),
+                    Text('Online',
+                        style: GoogleFonts.spaceGrotesk(
+                            fontSize: 11,
+                            color: AppColors.green,
+                            fontWeight: FontWeight.w500)),
                   ],
                 ),
               ],
             ),
           ),
           Container(
-            width: 40, height: 40,
-            decoration: BoxDecoration(color: AppColors.lightGrey, borderRadius: BorderRadius.circular(12)),
-            child: const Icon(Icons.more_vert, color: AppColors.textPrimary, size: 20),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+                color: AppColors.lightGrey,
+                borderRadius: BorderRadius.circular(12)),
+            child: const Icon(Icons.more_vert,
+                color: AppColors.textPrimary, size: 20),
           ),
         ],
       ),
@@ -184,7 +219,10 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
               border: Border.all(color: AppColors.primary.withOpacity(0.2)),
             ),
             child: Text(_quickPrompts[i],
-                style: GoogleFonts.spaceGrotesk(fontSize: 12, color: AppColors.primary, fontWeight: FontWeight.w500)),
+                style: GoogleFonts.spaceGrotesk(
+                    fontSize: 12,
+                    color: AppColors.primary,
+                    fontWeight: FontWeight.w500)),
           ),
         ),
       ),
@@ -196,7 +234,10 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
       padding: const EdgeInsets.fromLTRB(16, 10, 16, 16),
       decoration: const BoxDecoration(
         color: Colors.white,
-        boxShadow: [BoxShadow(color: Color(0x0A000000), blurRadius: 8, offset: Offset(0, -2))],
+        boxShadow: [
+          BoxShadow(
+              color: Color(0x0A000000), blurRadius: 8, offset: Offset(0, -2))
+        ],
       ),
       child: Row(
         children: [
@@ -204,11 +245,14 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
             child: TextField(
               controller: _controller,
               onSubmitted: _sendMessage,
-              style: GoogleFonts.spaceGrotesk(fontSize: 14, color: AppColors.textPrimary),
+              style: GoogleFonts.spaceGrotesk(
+                  fontSize: 14, color: AppColors.textPrimary),
               decoration: InputDecoration(
                 hintText: 'Ask me anything about travel...',
-                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                suffixIcon: const Icon(Icons.mic_outlined, color: AppColors.grey, size: 20),
+                contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                suffixIcon: const Icon(Icons.mic_outlined,
+                    color: AppColors.grey, size: 20),
               ),
             ),
           ),
@@ -216,9 +260,12 @@ class _AiAssistantScreenState extends State<AiAssistantScreen> {
           GestureDetector(
             onTap: () => _sendMessage(_controller.text),
             child: Container(
-              width: 48, height: 48,
-              decoration: const BoxDecoration(gradient: AppColors.primaryGradient, shape: BoxShape.circle),
-              child: const Icon(Icons.send_rounded, color: Colors.white, size: 20),
+              width: 48,
+              height: 48,
+              decoration: const BoxDecoration(
+                  gradient: AppColors.primaryGradient, shape: BoxShape.circle),
+              child:
+                  const Icon(Icons.send_rounded, color: Colors.white, size: 20),
             ),
           ),
         ],
@@ -242,14 +289,18 @@ class _BubbleWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
-        mainAxisAlignment: msg.isAi ? MainAxisAlignment.start : MainAxisAlignment.end,
+        mainAxisAlignment:
+            msg.isAi ? MainAxisAlignment.start : MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           if (msg.isAi) ...[
             Container(
-              width: 32, height: 32,
-              decoration: const BoxDecoration(gradient: AppColors.primaryGradient, shape: BoxShape.circle),
-              child: const Icon(Icons.auto_awesome, color: Colors.white, size: 16),
+              width: 32,
+              height: 32,
+              decoration: const BoxDecoration(
+                  gradient: AppColors.primaryGradient, shape: BoxShape.circle),
+              child:
+                  const Icon(Icons.auto_awesome, color: Colors.white, size: 16),
             ),
             const SizedBox(width: 8),
           ],
@@ -264,7 +315,10 @@ class _BubbleWidget extends StatelessWidget {
                   bottomLeft: Radius.circular(msg.isAi ? 4 : 18),
                   bottomRight: Radius.circular(msg.isAi ? 18 : 4),
                 ),
-                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 6)],
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black.withOpacity(0.05), blurRadius: 6)
+                ],
               ),
               child: Text(
                 msg.text,
@@ -289,13 +343,16 @@ class _TypingIndicator extends StatefulWidget {
   State<_TypingIndicator> createState() => _TypingIndicatorState();
 }
 
-class _TypingIndicatorState extends State<_TypingIndicator> with SingleTickerProviderStateMixin {
+class _TypingIndicatorState extends State<_TypingIndicator>
+    with SingleTickerProviderStateMixin {
   late AnimationController _ctrl;
 
   @override
   void initState() {
     super.initState();
-    _ctrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 900))..repeat(reverse: true);
+    _ctrl = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 900))
+      ..repeat(reverse: true);
   }
 
   @override
@@ -311,9 +368,12 @@ class _TypingIndicatorState extends State<_TypingIndicator> with SingleTickerPro
       child: Row(
         children: [
           Container(
-            width: 32, height: 32,
-            decoration: const BoxDecoration(gradient: AppColors.primaryGradient, shape: BoxShape.circle),
-            child: const Icon(Icons.auto_awesome, color: Colors.white, size: 16),
+            width: 32,
+            height: 32,
+            decoration: const BoxDecoration(
+                gradient: AppColors.primaryGradient, shape: BoxShape.circle),
+            child:
+                const Icon(Icons.auto_awesome, color: Colors.white, size: 16),
           ),
           const SizedBox(width: 8),
           Container(
@@ -321,25 +381,31 @@ class _TypingIndicatorState extends State<_TypingIndicator> with SingleTickerPro
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(18),
-              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 6)],
+              boxShadow: [
+                BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 6)
+              ],
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
-              children: List.generate(3, (i) => AnimatedBuilder(
-                animation: _ctrl,
-                builder: (_, __) => Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 2),
-                  width: 7, height: 7,
-                  decoration: BoxDecoration(
-                    color: AppColors.primary.withOpacity(0.3 + (_ctrl.value * 0.7 * (i == 1 ? 1 : 0.6))),
-                    shape: BoxShape.circle,
-                  ),
-                ),
-              )),
+              children: List.generate(
+                  3,
+                  (i) => AnimatedBuilder(
+                        animation: _ctrl,
+                        builder: (_, __) => Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 2),
+                          width: 7,
+                          height: 7,
+                          decoration: BoxDecoration(
+                            color: AppColors.primary.withOpacity(
+                                0.3 + (_ctrl.value * 0.7 * (i == 1 ? 1 : 0.6))),
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                      )),
             ),
           ),
         ],
       ),
     );
   }
-}
+} // ai assistant built by amaya
