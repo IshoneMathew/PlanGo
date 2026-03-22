@@ -167,3 +167,4 @@ class _OnboardData {
   final String imageUrl, headline, highlight, subtitle, buttonLabel;
   const _OnboardData({required this.imageUrl, required this.headline, required this.highlight, required this.subtitle, required this.buttonLabel});
 }
+//Done By Somidu

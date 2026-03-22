@@ -31,7 +31,8 @@ class MapViewScreen extends StatelessWidget {
             right: 0,
             child: SafeArea(
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 child: Row(
                   children: [
                     GestureDetector(
@@ -43,7 +44,8 @@ class MapViewScreen extends StatelessWidget {
                           color: Colors.black38,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: const Icon(Icons.chevron_left, color: Colors.white),
+                        child:
+                            const Icon(Icons.chevron_left, color: Colors.white),
                       ),
                     ),
                     const Expanded(
@@ -70,7 +72,8 @@ class MapViewScreen extends StatelessWidget {
             top: 160,
             left: 80,
             child: _MapPinCard(
-              imageUrl: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=200&q=80',
+              imageUrl:
+                  'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=200&q=80',
               name: 'La-Hotel',
               distance: '2.09 mi',
             ),
@@ -79,7 +82,8 @@ class MapViewScreen extends StatelessWidget {
             top: 260,
             left: 20,
             child: _MapPinCard(
-              imageUrl: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=200&q=80',
+              imageUrl:
+                  'https://images.unsplash.com/photo-1540541338287-41700207dee6?w=200&q=80',
               name: 'Lemon Garden',
               distance: '2.09 mi',
             ),
@@ -172,7 +176,8 @@ class MapViewScreen extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              const Icon(Icons.star, color: AppColors.star, size: 16),
+                              const Icon(Icons.star,
+                                  color: AppColors.star, size: 16),
                               const SizedBox(width: 4),
                               Text(
                                 '${destination.rating}',
@@ -294,7 +299,10 @@ class _BlueDot extends StatelessWidget {
         shape: BoxShape.circle,
         border: Border.all(color: Colors.white, width: 2),
         boxShadow: [
-          BoxShadow(color: AppColors.primary.withOpacity(0.4), blurRadius: 8, spreadRadius: 2),
+          BoxShadow(
+              color: AppColors.primary.withOpacity(0.4),
+              blurRadius: 8,
+              spreadRadius: 2),
         ],
       ),
     );
@@ -340,7 +348,10 @@ class _TravelerStack extends StatelessWidget {
               ),
               child: const Center(
                 child: Text('+50',
-                    style: TextStyle(color: Colors.white, fontSize: 6, fontWeight: FontWeight.w700)),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 6,
+                        fontWeight: FontWeight.w700)),
               ),
             ),
           ),
@@ -348,4 +359,4 @@ class _TravelerStack extends StatelessWidget {
       ),
     );
   }
-}
+} //build by gavesha

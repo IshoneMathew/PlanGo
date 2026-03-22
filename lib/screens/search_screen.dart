@@ -199,4 +199,4 @@ class _SearchCard extends StatelessWidget {
       ),
     );
   }
-}
+}//done by chamadith

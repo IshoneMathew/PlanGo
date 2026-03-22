@@ -685,4 +685,4 @@ class _ChangeRow extends StatelessWidget {
       Expanded(child: Text(value, style: GoogleFonts.spaceGrotesk(fontSize: 11, fontWeight: FontWeight.w700, color: AppColors.textPrimary))),
     ]),
   );
-}
+}//done by nesandu
