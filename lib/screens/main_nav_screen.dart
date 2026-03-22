@@ -87,11 +87,13 @@ class _MainNavScreenState extends State<MainNavScreen> {
                 child: GestureDetector(
                   onTap: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => const RoutePlannerScreen()),
+                    MaterialPageRoute(
+                        builder: (_) => const RoutePlannerScreen()),
                   ),
                   onLongPress: () => Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => const AiAssistantScreen()),
+                    MaterialPageRoute(
+                        builder: (_) => const AiAssistantScreen()),
                   ),
                   child: Center(
                     child: Container(
@@ -101,7 +103,8 @@ class _MainNavScreenState extends State<MainNavScreen> {
                         color: AppColors.dark,
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(Icons.location_on_rounded, color: Colors.white, size: 24),
+                      child: const Icon(Icons.location_on_rounded,
+                          color: Colors.white, size: 24),
                     ),
                   ),
                 ),
@@ -176,4 +179,4 @@ class _NavItem extends StatelessWidget {
       ),
     );
   }
-}
+} //build by gavesha
