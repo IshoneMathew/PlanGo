@@ -353,4 +353,4 @@ class _LoadingShimmer extends StatelessWidget {
 class _Feature {
   final String label; final IconData icon; final LinearGradient gradient; final VoidCallback onTap;
   const _Feature(this.label, this.icon, this.gradient, this.onTap);
-}
+}//done by nikil
