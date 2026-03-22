@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'firebase_options.dart';
+import 'package:travel_app/firebase_options.dart';
 import 'theme/app_theme.dart';
 import 'providers/auth_provider.dart' as app_auth;
 import 'services/firebase_service.dart';
