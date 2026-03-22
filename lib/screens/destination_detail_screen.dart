@@ -357,4 +357,4 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
       ),
     );
   }
-}
+}//done the destination detail part
