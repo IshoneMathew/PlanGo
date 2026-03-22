@@ -219,4 +219,4 @@ class _NotifCard extends StatelessWidget {
       ),
     );
   }
-}
+}//done by nesandu
