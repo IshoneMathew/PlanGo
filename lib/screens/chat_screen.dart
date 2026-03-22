@@ -24,7 +24,8 @@ class _ChatScreenState extends State<ChatScreen> {
       _messages.add(ChatMessage(
         id: '${_messages.length + 1}',
         text: text,
-        time: '${DateTime.now().hour}:${DateTime.now().minute.toString().padLeft(2, '0')}',
+        time:
+            '${DateTime.now().hour}:${DateTime.now().minute.toString().padLeft(2, '0')}',
         isMe: true,
       ));
     });
@@ -84,7 +85,8 @@ class _ChatScreenState extends State<ChatScreen> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: const Icon(Icons.phone_outlined, color: AppColors.textPrimary),
+            icon:
+                const Icon(Icons.phone_outlined, color: AppColors.textPrimary),
             onPressed: () {},
           ),
         ],
@@ -101,13 +103,15 @@ class _ChatScreenState extends State<ChatScreen> {
                   return Center(
                     child: Container(
                       margin: const EdgeInsets.only(bottom: 16),
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 6),
                       decoration: BoxDecoration(
                         color: AppColors.lightGrey,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text('Today',
-                          style: GoogleFonts.spaceGrotesk(fontSize: 12, color: AppColors.grey)),
+                          style: GoogleFonts.spaceGrotesk(
+                              fontSize: 12, color: AppColors.grey)),
                     ),
                   );
                 }
@@ -126,7 +130,12 @@ class _ChatScreenState extends State<ChatScreen> {
       padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
       decoration: BoxDecoration(
         color: Colors.white,
-        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 8, offset: const Offset(0, -2))],
+        boxShadow: [
+          BoxShadow(
+              color: Colors.black.withOpacity(0.05),
+              blurRadius: 8,
+              offset: const Offset(0, -2))
+        ],
       ),
       child: Row(
         children: [
@@ -134,11 +143,14 @@ class _ChatScreenState extends State<ChatScreen> {
             child: TextField(
               controller: _msgController,
               onSubmitted: (_) => _sendMessage(),
-              style: GoogleFonts.spaceGrotesk(fontSize: 14, color: AppColors.textPrimary),
+              style: GoogleFonts.spaceGrotesk(
+                  fontSize: 14, color: AppColors.textPrimary),
               decoration: InputDecoration(
                 hintText: 'Type you message',
-                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                suffixIcon: const Icon(Icons.attach_file, color: AppColors.grey, size: 20),
+                contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                suffixIcon: const Icon(Icons.attach_file,
+                    color: AppColors.grey, size: 20),
               ),
             ),
           ),
@@ -170,7 +182,8 @@ class _MessageBubble extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: Row(
-        mainAxisAlignment: message.isMe ? MainAxisAlignment.end : MainAxisAlignment.start,
+        mainAxisAlignment:
+            message.isMe ? MainAxisAlignment.end : MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           if (!message.isMe && message.senderAvatar != null) ...[
@@ -182,7 +195,8 @@ class _MessageBubble extends StatelessWidget {
             const SizedBox(width: 8),
           ],
           Container(
-            constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.65),
+            constraints: BoxConstraints(
+                maxWidth: MediaQuery.of(context).size.width * 0.65),
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
             decoration: BoxDecoration(
               color: message.isMe ? const Color(0xFFDCEAFF) : Colors.white,
@@ -192,7 +206,9 @@ class _MessageBubble extends StatelessWidget {
                 bottomLeft: Radius.circular(message.isMe ? 18 : 4),
                 bottomRight: Radius.circular(message.isMe ? 4 : 18),
               ),
-              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 4)],
+              boxShadow: [
+                BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 4)
+              ],
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -219,4 +235,4 @@ class _MessageBubble extends StatelessWidget {
       ),
     );
   }
-}
+} // chat screens
