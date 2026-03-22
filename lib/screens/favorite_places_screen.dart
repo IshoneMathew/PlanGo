@@ -137,4 +137,4 @@ class _FavCard extends StatelessWidget {
     );
   }
 }
-//favorite places screen by heshala
+//favorite places screen by heshalaa
